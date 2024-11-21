@@ -20,18 +20,13 @@
   "author": {
     "name": "Beatriz Santana Silva"
   },
-  "contributors": [
-
-  ],
+  "contributors": [],
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
     "test": ""
-  },
+  }, 
   "dependencies": {
-
-  },
-  "devDependencies": {
-
+    "mongodb": "^6.10.0"
   }
 }
