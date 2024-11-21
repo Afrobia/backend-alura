@@ -2,7 +2,7 @@
   "name": "backend instabytes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "license": "AGPL-version-3.0",
   "private": false,
@@ -24,7 +24,8 @@
 
   ],
   "scripts": {
-    "dev": "",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "test": ""
   },
   "dependencies": {
