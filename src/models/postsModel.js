@@ -16,4 +16,4 @@ async function createPosts(newPost) {
     return colecao;
 };
 
-export { getAllPosts, createPosts };
+export { getAllPosts, createPosts};
