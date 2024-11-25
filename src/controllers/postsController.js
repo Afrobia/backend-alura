@@ -1,4 +1,5 @@
 import { getAllPosts, createPosts } from "../models/postsModel.js";
+import fs from "fs";
 
 async function listarPosts(req, res) {
   const result = await getAllPosts();
@@ -25,6 +26,8 @@ async function uploadImagem(req, res) {
   
     try {
       const postCriado = await createPosts(novoPost);
+      const imagemAtualizada = `uploads/${postCriado.insertedId}.png`;
+      fs.renameSync(req.file.path, imagemAtualizada)
       res.status(201).json(postCriado);
     } catch (erro) {
       res.status(500).json({ "Bad Request": "Erro no servido" });
