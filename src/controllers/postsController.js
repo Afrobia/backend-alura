@@ -17,7 +17,11 @@ async function criarPosts(req, res) {
 };
 
 async function uploadImagem(req, res) {
-    const novoPost = req.body;
+  const novoPost = {
+    descricao: "",
+    imgUrl: req.file.originalname,
+    alt: ""
+  };
   
     try {
       const postCriado = await createPosts(novoPost);
